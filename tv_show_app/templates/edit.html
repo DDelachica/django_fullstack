@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <h1>Edit Show {{show.id}}</h1>
+    <form action="/shows/{{show.id}}/edit/update" method=POST>
+        {% csrf_token %}
+        Title: <input type="text" name='title'>
+        Network: <input type="text" name='network'>
+        Release Date: <input type="text" name='release'>
+        Description: <input type="text" name='desc'>
+        <input type="submit" value="Update">
+    </form>
+    <a href="/shows">Back</a> | <a href="/shows/{{show.id}}">Go To Show</a>
+</body>
+</html>

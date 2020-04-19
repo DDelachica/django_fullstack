@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Add a New Show</h1>
+    <form action="/shows/new/add" method=POST>
+        {% csrf_token %}
+        Title: <input type="text" name='title'>
+        Network: <input type="text" name='network'>
+        Release Date: <input type="text" name='release'>
+        Description: <input type="text" name='desc'>
+        <input type="submit" value="Create">
+    </form>
+    <a href="/shows">Back</a> 
+</body>
+</html>
